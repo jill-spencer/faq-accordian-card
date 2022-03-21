@@ -1,0 +1,249 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-light: hsl(240, 5%, 91%);
+	--primary-dark: hsl(240, 6%, 50%);
+	--primary-very-dark: hsl(237, 12%, 33%);
+
+	--dark-blue: hsl(238, 29%, 16%);
+	--soft-red: hsl(14, 88%, 65%);
+	--black: #222;
+	--white: #fff;
+
+	--borderRadius: 2rem;
+	--letterSpacing: 1px;
+	--transition: 0.3s ease-in-out all;
+	--max-width: 1120px;
+	--fixed-width: 375px;
+
+	/* box shadow */
+	--shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.75;
+}
+
+.img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+/* 
+=================
+*** Accordian ***
+=================
+*/
+
+.desktop-img,
+.box-img,
+.desktop-shadow {
+	display: none;
+}
+
+main {
+	width: 85vw;
+	max-width: var(--fixed-width);
+	margin: 0 auto;
+}
+
+.questions-card {
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+	background: var(--white);
+	border-radius: var(--borderRadius);
+	position: relative;
+	box-shadow: var(--shadow-4);
+}
+
+.accordian-img {
+	position: absolute;
+	width: 65%;
+	margin: 0 auto;
+	top: -7rem;
+	left: 4rem;
+}
+
+.img-shadow {
+	position: absolute;
+	left: 4rem;
+}
+
+.title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-top: 8rem;
+}
+
+/* question section */
+
+.section-center {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	padding-bottom: 4rem;
+}
+
+.question-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.25rem 0;
+	border-bottom: 2px solid var(--primary-light);
+	color: var(--primary-very-dark);
+	cursor: pointer;
+}
+
+.question-title:hover {
+	font-weight: 700;
+}
+
+.question-btn {
+	background: transparent;
+	border: transparent;
+	color: var(--soft-red);
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.question-text {
+	padding: 1rem 0;
+	color: var(--primary-dark);
+	display: none;
+}
+
+.up-arrow {
+	display: none;
+}
+/* attribution */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 976px) {
+	main {
+		width: 85vw;
+		max-width: var(--max-width);
+		margin: 0 auto;
+	}
+
+	.questions-card {
+		margin-top: 6rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.img-container {
+		position: relative;
+		overflow: hidden;
+	}
+	.accordian-img,
+	.img-shadow {
+		display: none;
+	}
+	.desktop-img {
+		display: block;
+		position: absolute;
+		transform: scale(0.9);
+		overflow: hidden;
+		top: 6rem;
+		left: -6rem;
+		z-index: 2;
+	}
+
+	.box-img {
+		display: block;
+		position: absolute;
+		transform: scale(1.2);
+		top: 15rem;
+		left: -4.2rem;
+		height: 25%;
+		overflow: visible;
+		z-index: 3;
+	}
+
+	.desktop-shadow {
+		display: block;
+		position: absolute;
+		width: 100%;
+		transform: scale(2);
+		top: 1rem;
+		left: -17rem;
+		z-index: 1;
+	}
+	.title {
+		padding-top: 4rem;
+		margin-left: 1.3rem;
+		text-align: left;
+	}
+
+	.section-center {
+		margin-top: 0;
+		padding-right: 4rem;
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	.questions-card {
+		margin-top: 6rem;
+	}
+	.desktop-img {
+		transform: scale(1.1);
+		top: 6rem;
+		left: -4rem;
+	}
+
+	.box-img {
+		transform: scale(1.4);
+		top: 16rem;
+		left: -4.15rem;
+	}
+
+	.desktop-shadow {
+		transform: scale(1.6);
+		top: -2rem;
+		left: -18rem;
+	}
+
+	.title {
+		margin-left: 1.7rem;
+	}
+}
+
+/* For Javascipt */
+.show-text .question-text {
+	display: block;
+}
+
+.show-text .down-arrow {
+	display: none;
+}
+
+.show-text .up-arrow {
+	display: inline;
+}

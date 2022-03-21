@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+			integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- stylesheet -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main>
+			<div class="questions-card">
+				<div class="img-container">
+					<img
+						src="./images/illustration-woman-online-mobile.svg"
+						alt=""
+						class="img accordian-img"
+					/>
+					<img
+						src="./images/illustration-woman-online-desktop.svg"
+						alt=""
+						class="desktop-img"
+					/>
+					<img src="./images/bg-pattern-mobile.svg" alt="" class="img-shadow" />
+					<img
+						src="./images/bg-pattern-desktop.svg"
+						alt=""
+						class="desktop-shadow"
+					/>
+				</div>
+				<img
+					src="./images/illustration-box-desktop.svg"
+					alt=""
+					class="box-img"
+				/>
+				<section class="card-container">
+					<div class="title">
+						<h1>faq</h1>
+					</div>
+					<section class="section-center">
+						<!-- single question -->
+						<article class="single-question">
+							<div class="question-title">
+								<p class="title-text">How many team members can I invite</p>
+
+								<button class="question-btn">
+									<span class="down-arrow">
+										<i class="fa-solid fa-angle-down"></i>
+									</span>
+									<span class="up-arrow">
+										<i class="fa-solid fa-angle-up"></i>
+									</span>
+								</button>
+							</div>
+							<div class="question-text">
+								<p>
+									You can invite up to 2 additional users on the Free plan.
+									There is no limit on team members for the Premium plan.
+								</p>
+							</div>
+						</article>
+						<!-- end of single question -->
+						<!-- single question -->
+						<article class="single-question">
+							<div class="question-title">
+								<p class="title-text">What is the maximum file upload size?</p>
+
+								<button class="question-btn">
+									<span class="down-arrow">
+										<i class="fa-solid fa-angle-down"></i>
+									</span>
+									<span class="up-arrow">
+										<i class="fa-solid fa-angle-up"></i>
+									</span>
+								</button>
+							</div>
+							<div class="question-text">
+								<p>
+									No more than 2GB. All files in your account must fit your
+									allotted storage space.
+								</p>
+							</div>
+						</article>
+						<!-- end of single question -->
+						<!-- single question -->
+						<article class="single-question">
+							<div class="question-title">
+								<p class="title-text">How do I reset my password?</p>
+
+								<button class="question-btn">
+									<span class="down-arrow">
+										<i class="fa-solid fa-angle-down"></i>
+									</span>
+									<span class="up-arrow">
+										<i class="fa-solid fa-angle-up"></i>
+									</span>
+								</button>
+							</div>
+							<div class="question-text">
+								<p>
+									Click “Forgot password” from the login page or “Change
+									password” from your profile page. A reset link will be emailed
+									to you.
+								</p>
+							</div>
+						</article>
+						<!-- end of single question -->
+						<!-- single question -->
+						<article class="single-question">
+							<div class="question-title">
+								<p class="title-text">Can I cancel my subscription?</p>
+
+								<button class="question-btn">
+									<span class="down-arrow">
+										<i class="fa-solid fa-angle-down"></i>
+									</span>
+									<span class="up-arrow">
+										<i class="fa-solid fa-angle-up"></i>
+									</span>
+								</button>
+							</div>
+							<div class="question-text">
+								<p>
+									Yes! Send us a message and we’ll process your request no
+									questions asked.
+								</p>
+							</div>
+						</article>
+						<!-- end of single question -->
+						<!-- single question -->
+						<article class="single-question">
+							<div class="question-title">
+								<p class="title-text">Do you provide additional support?</p>
+
+								<button class="question-btn">
+									<span class="down-arrow">
+										<i class="fa-solid fa-angle-down"></i>
+									</span>
+									<span class="up-arrow">
+										<i class="fa-solid fa-angle-up"></i>
+									</span>
+								</button>
+							</div>
+							<div class="question-text">
+								<p>
+									Chat and email support is available 24/7. Phone lines are open
+									during normal business hours.
+								</p>
+							</div>
+						</article>
+						<!-- end of single question -->
+					</section>
+				</section>
+			</div>
+		</main>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Jill Spencer</a>.
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
